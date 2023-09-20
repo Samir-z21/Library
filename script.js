@@ -30,7 +30,7 @@ confirmBook.addEventListener("click", (event) => {
     let formTitle = addBookDialog.querySelector(".formTitle");
     let formAuthor = addBookDialog.querySelector(".formAuthor");
     let formPages = addBookDialog.querySelector(".formPages");
-    let formRead = addBookDialog.querySelector(".formRead");
+    let checkbox = addBookDialog.querySelector(".checkbox");
 
     // Check if forms are filled
     if (!formTitle.checkValidity() || !formAuthor.checkValidity() ) {
@@ -47,7 +47,7 @@ confirmBook.addEventListener("click", (event) => {
     title = formTitle.value;
     author = formAuthor.value;
     pages = formPages.value;
-    if (formRead.checked) {
+    if (checkbox.checked) {
         read = "Read"
     } else read = "Not Read"
 
@@ -60,7 +60,7 @@ confirmBook.addEventListener("click", (event) => {
     formTitle.value = '';
     formAuthor.value = '';
     formPages.value = '';
-    formRead.checked = false;
+    checkbox.checked = false;
 });
 
 // Preventing Enter key error
