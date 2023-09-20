@@ -10,15 +10,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
+    <!--Heading-->
     <div class="heading">
         <h1 class="page-heading"> Your Library</h1>
         <img src="images/books.png" alt="picture of books"> 
     </div>
-    <div class="add-btn-div">
-        <button class="add-book"> + New Book</button>
-    </div>
-    <div id="books-container">
 
+    <!-- Dialog added dynamically--> 
+    <dialog id="addBookDialog">
+        <form id="form">
+            <div class = "topForm">
+                New Book 
+                <button class = "close-btn" value="cancel" formmethod="dialog">x</button>
+            </div> 
+
+            <div class="inputs">
+                <input class="formTitle" type="text" placeholder="Title" pattern=".*[a-zA-Z].*" maxlength="20"  required>
+                <input class="formAuthor" type="text" placeholder="Author" pattern=".*[a-zA-Z].*" maxlength="20" required>
+                <input class="formPages" type="number" placeholder="Pages" min="1" max="9999" required>
+                <div class="formRead">
+                    <label> Read:</label> 
+                    <input class="checkbox" type="checkbox">
+                </div>
+            </div>
+
+          <div>
+            <button id="confirmBook">Add Book</button>
+          </div>
+        </form>
+    </dialog>
+
+    <!--AddBtn-->
+    <div class="add-btn-div">
+     <button  class="add-book">+ New Book</button>
     </div>
+
+    <!--Library Container-->
+    <div id="books-container"></div>
 </body>
 </html>

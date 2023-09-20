@@ -7,12 +7,22 @@ body {
     gap: 20px;
 }
 
+body button {
+    cursor: pointer;
+}
+
 .heading {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
 }
 
+.heading img {
+    width: 75px;
+}
+
+/*add new book btn style*/
 .add-btn-div {
     display: flex;
     justify-content: center;
@@ -25,8 +35,10 @@ body {
     height: 50px;
     font-size: 22px;
     border: 3px solid black;
+    border-radius: 10px;
 }
 
+/*book-container style*/
 #books-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,290px);
@@ -34,6 +46,7 @@ body {
     gap: 40px;
 }
 
+/*individual card style*/
 .book-card {
     padding-top: 20px;
     background-color: rgb(251,208,130);
@@ -41,15 +54,14 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     height: 300px;
 }
 
 
-
 #books-container button {
-    background-color: green;
     border-radius: 10px;
     border: 2px solid black;
     height: 35px;
@@ -57,12 +69,92 @@ body {
     font-size: 20px;
 }
 
+.readBtn {
+    background-color: rgb(99,218,99);
+}
 
+.notReadBtn {
+    background-color: red;
+}
+
+.remove-btn {
+    background-color: rgb(215,217,218);
+}
 .book-title {
     font-size: 25px;
     font-weight: 800;
 }
 
-.author-pages {
+.author,
+.pages {
     font-size: 20px;
+}
+
+/*styling for dialog*/ 
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+    width: clamp(100px, 300px, 400px);
+    font-size: clamp(15px, 20vw, 30px);
+}
+
+#addBookDialog {
+    border: none;
+}
+
+.topForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formTitle,
+.formAuthor,
+.formPages{
+    width: clamp(90px, 25vw, 200px);
+    height: 25px;
+    border: 3px solid black;
+}
+
+.formTitle,
+.formAuthor,
+.formPages::placeholder {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+.formRead {
+    display: flex;
+    gap: 5px;
+}
+
+.checkbox {
+    position: relative;
+    top: 2px;
+    width: 20px;
+    height: auto;
+}
+
+#confirmBook {
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 3px solid black;
 }
