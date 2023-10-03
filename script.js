@@ -80,13 +80,14 @@ closeBtn.addEventListener ('click', (event) => {
 
 
 // Obj Contructor
-function Book (title, author, pages, read) {
+class Book {
+    constructor(title, author, pages, read) {
     this.title = title
     this.author = author 
     this.pages = pages 
     this.read = read 
 };
-
+}
 // Add book to Array
 function addBookToLibraryArray() {
     let newBookObj = new Book(title, author, pages, read); 
